@@ -74,21 +74,21 @@ void GameText::setString(const sf::String& source, const bool& updateSource)
             case '~': //	italics
             {
                 TextChunk::add(chunks, current, last);
-                TextChunk::format(last, current, Italic);
+                TextChunk::format(current, last, Italic);
                 current->color = last->color;
                 break;
             }
             case '*': //	bold
             {
                 TextChunk::add(chunks, current, last);
-                TextChunk::format(last, current, Bold);
+                TextChunk::format(current, last, Bold);
                 current->color = last->color;
                 break;
             }
             case '_': 	//	underline
             {
                 TextChunk::add(chunks, current, last);
-                TextChunk::format(last, current, Underlined);
+                TextChunk::format(current, last, Underlined);
                 current->color = last->color;
                 break;
             }
